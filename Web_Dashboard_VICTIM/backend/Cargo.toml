@@ -1,0 +1,29 @@
+[package]
+name = "backend"
+version = "0.1.0"
+edition = "2021"
+description = "Backend for IoT Sensor Dashboard"
+
+[dependencies]
+actix-web = "4.4.0"
+actix-cors = "0.6.4"
+actix-files = "0.6.2"
+rumqttc = "0.22.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.32.0", features = ["full"] }
+env_logger = "0.10.0"
+log = "0.4.20"
+config = "0.13.3"
+dotenv = "0.15.0"
+thiserror = "1.0.48"
+actix-web-actors = "4.2.0"
+actix = "0.13.0"
+futures = "0.3.28"
+time = "0.3.28"
+
+# Database dependencies
+diesel = { version = "2.1.0", features = ["postgres", "r2d2", "chrono"] }
+r2d2 = "0.8.10"
+chrono = { version = "0.4.26", features = ["serde"] }
+diesel_migrations = "2.1.0"
